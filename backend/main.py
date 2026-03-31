@@ -67,7 +67,7 @@ app.add_middleware(
 )
 
 @app.post('/predict')
-def hello(user_input:TextInput):
+def predict(user_input:TextInput):
 # Now i have got Inpur i will preprocess it 
     text=user_input.text
     text=text.lower()
@@ -86,6 +86,9 @@ def hello(user_input:TextInput):
         "confidence":confidence
 } 
 
+@app.get('/')
+def home():
+    return {"message":"this API is made on FastAPI so please visit /docs for more info"}
 @app.get('/health')
 def health():
     return {"status": "ok"}
