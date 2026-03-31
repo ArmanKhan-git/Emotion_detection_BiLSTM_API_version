@@ -1,0 +1,10 @@
+streamlit
+tensorflow 
+numpy 
+scikit-learn 
+h5py
+pandas
+fastapi
+uvicorn
+pydantic
+huggingface_hub
